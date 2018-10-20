@@ -28,7 +28,7 @@
 
 ***********************************************************************/
 
-#define PRINTER_NAME "TEVO Tarantula (EasyConfig)"  // Change this to whatever you wish, or leave it as it is.
+#define PRINTER_NAME "TEVO Tarantula"  // Change this to whatever you wish, or leave it as it is.
                                                     // NOTE: Whatever you put here will have " Ready..." appended to it.
 
 /**
@@ -54,8 +54,8 @@
  * Offset from endpoints to get nozzle to 0,0 (front/left of bed)
  * (How to center prints: https://github.com/JimBrown/MarlinTarantula/wiki/How-to-center-your-prints-(EasyConfig))
  */
-#define NOZZLE_X          0
-#define NOZZLE_Y          0
+#define NOZZLE_X          -2
+#define NOZZLE_Y          -2
 
 /**
  * Minimal Z height (in mm) before homing (G28) for Z clearance above the bed, clamps, ...
@@ -66,14 +66,14 @@
  * Primary Extruder steps per mm (plugged in to E0 port on controller)
  * (How to calibrate: https://toms3d.org/2014/04/06/3d-printing-guides-calibrating-your-extruder/)
  */
-#define E0_STEPS      100 // Stock extruder. If you have a Tevo Titan, try 400 then calibrate.
+#define E0_STEPS      394 // Stock extruder. If you have a Tevo Titan, try 400 then calibrate.
 //#define CHANGE_E0_DIRECTION   // If your extruder is going backwards, enable this.
 
 /**
  * Z Axis steps per mm (Default for stock lead screw is 1600)
  * If you install a lead screw with a different pitch and/or lead, change this
  */
-#define Z_STEPS      1600 // Stock lead screw
+#define Z_STEPS      1588 // Stock lead screw: 1600
 
 /**
  * Z-Probe type (must be none or one of them)
@@ -946,9 +946,9 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
 #if ENABLED(DUAL_EXTRUDER)
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, Z_STEPS, E0_STEPS, E1_STEPS }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.6, 80, Z_STEPS, E0_STEPS, E1_STEPS }
 #else
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, Z_STEPS, E0_STEPS }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 79.6, 80, Z_STEPS, E0_STEPS }
 #endif
 
 /**
